@@ -1,0 +1,116 @@
+/* Base */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #111111;
+  line-height: 1.6;
+}
+
+header {
+  background: #003366; /* Deep blue */
+  color: #ffffff;
+  padding: 1.5rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+nav a:hover {
+  background: #005daa;
+}
+
+nav a.active {
+  background: #c8102e; /* Red highlight */
+}
+
+/* Main content */
+main {
+  padding: 2rem;
+}
+
+main section {
+  margin-bottom: 2rem;
+}
+
+main blockquote {
+  font-style: italic;
+  color: #003366;
+  border-left: 4px solid #005daa;
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+main ol {
+  padding-left: 1.5rem;
+}
+
+footer {
+  background: #111111; /* Black footer */
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav a {
+    display: block;
+    padding: 0.5rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
+
+/* Link Button */
+a.button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #005daa;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+a.button:hover {
+  background-color: #003366;
+}
