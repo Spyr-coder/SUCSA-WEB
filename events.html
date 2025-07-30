@@ -6,6 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Events - Seme Students Association</title>
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ✅ Lightbox2 CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+  <style>
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 1rem 0;
+    }
+    .gallery a {
+      flex: 1 0 200px;
+      max-width: 200px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -46,7 +71,7 @@
       <p>Don’t miss this opportunity to connect with your future. Be there!</p>
 
     <div class="gallery">
-      <img src="../assets/images/car.jpg" alt="Career Fair Poster">
+      <a href="../assets/images/car.jpg" data-lightbox="career"><img src="../assets/images/car.jpg" alt="Career Fair Poster"></a>
     </div>
 
     <!-- Past Event: International Day Against Drug Abuse -->
@@ -57,24 +82,25 @@
     </p>
 
     <div class="gallery">
-      <img src="../assets/images/drugs1.jpg" alt="SUCSA event 1">
-      <img src="../assets/images/drugs2.jpg" alt="SUCSA event 2">
-      <img src="../assets/images/drugs3.jpg" alt="SUCSA event 3">
-      <img src="../assets/images/drugs4.jpg" alt="SUCSA event 4">
-      <img src="../assets/images/drugs5.jpg" alt="SUCSA event 5">
-      <img src="../assets/images/drugs6.jpg" alt="SUCSA event 6">
-      <img src="../assets/images/drugs7.jpg" alt="SUCSA event 7">
-      <img src="../assets/images/drugs8.jpg" alt="SUCSA event 8">
-      <img src="../assets/images/drugs9.jpg" alt="SUCSA event 9">
-      <img src="../assets/images/drugs10.jpg" alt="SUCSA event 10">
-      <img src="../assets/images/drugs11.jpg" alt="SUCSA event 11">
-      <img src="../assets/images/drugs12.jpg" alt="SUCSA event 12">
-      <img src="../assets/images/drugs13.jpg" alt="SUCSA event 13">
-      <img src="../assets/images/drugs14.jpg" alt="SUCSA event 14">
-      <img src="../assets/images/drugs15.jpg" alt="SUCSA event 15">
-      <img src="../assets/images/drugs16.jpg" alt="SUCSA event 16">
-      <img src="../assets/images/drugs17.jpg" alt="SUCSA event 17">
-      <img src="../assets/images/drugs18.jpg" alt="SUCSA event 18">
+      <!-- Repeat for all 18 images -->
+      <a href="../assets/images/drugs1.jpg" data-lightbox="drugs"><img src="../assets/images/drugs1.jpg" alt=""></a>
+      <a href="../assets/images/drugs2.jpg" data-lightbox="drugs"><img src="../assets/images/drugs2.jpg" alt=""></a>
+      <a href="../assets/images/drugs3.jpg" data-lightbox="drugs"><img src="../assets/images/drugs3.jpg" alt=""></a>
+      <a href="../assets/images/drugs4.jpg" data-lightbox="drugs"><img src="../assets/images/drugs4.jpg" alt=""></a>
+      <a href="../assets/images/drugs5.jpg" data-lightbox="drugs"><img src="../assets/images/drugs5.jpg" alt=""></a>
+      <a href="../assets/images/drugs6.jpg" data-lightbox="drugs"><img src="../assets/images/drugs6.jpg" alt=""></a>
+      <a href="../assets/images/drugs7.jpg" data-lightbox="drugs"><img src="../assets/images/drugs7.jpg" alt=""></a>
+      <a href="../assets/images/drugs8.jpg" data-lightbox="drugs"><img src="../assets/images/drugs8.jpg" alt=""></a>
+      <a href="../assets/images/drugs9.jpg" data-lightbox="drugs"><img src="../assets/images/drugs9.jpg" alt=""></a>
+      <a href="../assets/images/drugs10.jpg" data-lightbox="drugs"><img src="../assets/images/drugs10.jpg" alt=""></a>
+      <a href="../assets/images/drugs11.jpg" data-lightbox="drugs"><img src="../assets/images/drugs11.jpg" alt=""></a>
+      <a href="../assets/images/drugs12.jpg" data-lightbox="drugs"><img src="../assets/images/drugs12.jpg" alt=""></a>
+      <a href="../assets/images/drugs13.jpg" data-lightbox="drugs"><img src="../assets/images/drugs13.jpg" alt=""></a>
+      <a href="../assets/images/drugs14.jpg" data-lightbox="drugs"><img src="../assets/images/drugs14.jpg" alt=""></a>
+      <a href="../assets/images/drugs15.jpg" data-lightbox="drugs"><img src="../assets/images/drugs15.jpg" alt=""></a>
+      <a href="../assets/images/drugs16.jpg" data-lightbox="drugs"><img src="../assets/images/drugs16.jpg" alt=""></a>
+      <a href="../assets/images/drugs17.jpg" data-lightbox="drugs"><img src="../assets/images/drugs17.jpg" alt=""></a>
+      <a href="../assets/images/drugs18.jpg" data-lightbox="drugs"><img src="../assets/images/drugs18.jpg" alt=""></a>
     </div>
 
     <!-- Past Event: World Environment Day -->
@@ -83,27 +109,24 @@
       On <strong>5th June 2025</strong>, members of the Seme University and College Students Association (SUCSA) joined the global community in celebrating <strong>World Environment Day 2025</strong> under the theme <em>“Ending Plastic Pollution.”</em>
     </p>
     <p>
-      In partnership with the administration and Scouts of <strong>Seme Technical and Vocational College</strong>, we planted trees as a symbol of our commitment to a greener, more sustainable future. This act of unity not only celebrated the day but also sparked critical conversations on how afforestation can reduce the impact of plastic pollution.
-    </p>
-    <p>
-      We emphasized alternative ways to reuse plastics instead of disposing of them irresponsibly. Nature-based solutions, such as afforestation, are vital to rebuilding ecosystems and reducing synthetic waste. We thank all who took part in this impactful initiative.
-    </p>
-    <p>
-      Let us continue the mission to educate, act, and lead every day—not just on World Environment Day!
+      In partnership with the administration and Scouts of <strong>Seme Technical and Vocational College</strong>, we planted trees as a symbol of our commitment to a greener, more sustainable future.
     </p>
 
     <div class="gallery">
-      <img src="../assets/images/treep1.png" alt="Tree Planting 1">
-      <img src="../assets/images/treep2.png" alt="Tree Planting 2">
-      <img src="../assets/images/treep3.png" alt="Tree Planting 3">
-      <img src="../assets/images/treep4.png" alt="Tree Planting 4">
-      <img src="../assets/images/treep5.png" alt="Tree Planting 5">
-      <img src="../assets/images/treep6.png" alt="Tree Planting 6">
+      <a href="../assets/images/treep1.png" data-lightbox="trees"><img src="../assets/images/treep1.png" alt=""></a>
+      <a href="../assets/images/treep2.png" data-lightbox="trees"><img src="../assets/images/treep2.png" alt=""></a>
+      <a href="../assets/images/treep3.png" data-lightbox="trees"><img src="../assets/images/treep3.png" alt=""></a>
+      <a href="../assets/images/treep4.png" data-lightbox="trees"><img src="../assets/images/treep4.png" alt=""></a>
+      <a href="../assets/images/treep5.png" data-lightbox="trees"><img src="../assets/images/treep5.png" alt=""></a>
+      <a href="../assets/images/treep6.png" data-lightbox="trees"><img src="../assets/images/treep6.png" alt=""></a>
     </div>
   </main>
 
   <footer>
     <p>&copy; 2025 Seme Universities and Colleges Students Association</p>
   </footer>
+
+  <!-- ✅ Lightbox2 JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
