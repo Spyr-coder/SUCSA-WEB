@@ -207,4 +207,32 @@ footer p {
     text-align: center;
   }
 }
+/* Gallery Style */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive event text list */
+main ul {
+  list-style: disc;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
 
