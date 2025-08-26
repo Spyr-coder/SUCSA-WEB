@@ -2,7 +2,6 @@
 // Events Data
 // ===============================
 const events = [
-  
   {
     name: "Health Camp",
     date: "2025-11-15T09:00:00",
@@ -34,7 +33,6 @@ function renderEvents() {
   const upcomingContainer = document.getElementById("upcoming-events");
   const pastContainer = document.getElementById("past-events");
 
-  // Clear containers before re-rendering
   upcomingContainer.innerHTML = "";
   pastContainer.innerHTML = "";
 
@@ -45,7 +43,6 @@ function renderEvents() {
     const eventDiv = document.createElement("div");
     eventDiv.classList.add("event");
 
-    // Event Title & Description
     const title = document.createElement("h3");
     title.textContent = event.name;
 
@@ -55,9 +52,7 @@ function renderEvents() {
     const timer = document.createElement("p");
     timer.classList.add("timer");
 
-    // Decide where to place event
     if (eventDate > now) {
-      // Still upcoming
       timer.textContent = "Loading countdown...";
 
       eventDiv.appendChild(title);
@@ -66,7 +61,6 @@ function renderEvents() {
 
       upcomingContainer.appendChild(eventDiv);
 
-      // Update countdown every second
       const interval = setInterval(() => {
         const nowTime = new Date().getTime();
         const distance = eventDate.getTime() - nowTime;
@@ -80,7 +74,6 @@ function renderEvents() {
       }, 1000);
 
     } else {
-      // Event already passed
       timer.textContent = "This event has passed.";
 
       eventDiv.appendChild(title);
