@@ -11,12 +11,27 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
 
   <style>
-    .countdown {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #b22222;
-      margin-bottom: 1em;
+    /* Minimal styles to make cards & timers look clean, safe to keep */
+    .events-wrap { display: grid; gap: 1.25rem; }
+    .event-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 1rem 1.25rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+      background: #fff;
     }
+    .event-card h3 { margin: 0 0 0.25rem; }
+    .event-meta { font-size: .95rem; color: #374151; margin: .25rem 0 .5rem; }
+    .countdown {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #b22222;
+      margin: .25rem 0 .75rem;
+    }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: .5rem; }
+    .gallery img { width: 100%; height: 120px; object-fit: cover; border-radius: 10px; }
+    .section-title { margin-top: 2rem; }
+    .muted { color: #6b7280; }
   </style>
 </head>
 <body>
@@ -33,74 +48,65 @@
     </nav>
   </header>
 
-  <main>
-    <h2>Upcoming Events</h2>
-    <p>Stay updated with our meetings, networking events, and community projects.</p>
+  <main class="events-wrap">
+    <section aria-labelledby="upcoming-title">
+      <h2 id="upcoming-title">Upcoming Events</h2>
+      <p class="muted">Stay updated with our meetings, networking events, and community projects.</p>
 
-    <!-- Upcoming Career Fair -->
-    <h3>Upcoming: SUCSA Career Fair</h3>
-    <p id="careerCountdown" class="countdown">⏳ Loading countdown...</p>
-    <p>
-      Don’t Miss the Career Fair at Pap Kadundo Stadium, Seme!<br><br>
-      Mark your calendar for <strong>9th August 2025</strong>, as <strong>Hisani Foundation</strong>, in partnership with <strong>SUCSA</strong> and <strong>Prestigious Consultancy</strong>, hosts a transformative Career Fair at <strong>Pap Kadundo Stadium</strong>.
-    </p>
-    <ul>
-      <li>Thought-provoking sessions with leaders in education, business, and governance</li>
-      <li>Exhibition booths from universities, TVET institutions, and employers</li>
-      <li>Career mentorship and personal development workshops</li>
-      <li>Innovation displays and student talent showcases</li>
-    </ul>
-    <p><strong>📍 Venue:</strong> Pap Kadundo Stadium, Seme<br>
-    <strong>📅 Date:</strong> 9th August 2025<br>
-    <strong>🕘 Time:</strong> 9:00 AM – 4:00 PM</p>
+      <!-- Dynamic upcoming events will render here -->
+      <div id="upcomingEventsList"></div>
+      <p id="noUpcoming" class="muted" style="display:none;">No upcoming events at the moment. Check back soon.</p>
+    </section>
 
-    <div class="gallery">
-      <a href="../assets/images/car.jpg" data-lightbox="career" data-title="Career Fair Poster">
-        <img src="../assets/images/car.jpg" alt="Career Fair Poster">
-      </a>
-    </div>
+    <section aria-labelledby="past-title" class="section-title">
+      <h2 id="past-title">Past Events</h2>
 
-    <!-- Past Event: Drug Abuse Awareness -->
-    <h2>Past Event: International Day Against Drug Abuse & Illicit Trafficking</h2>
-    <p>
-      On <strong>26th June 2025</strong>, SUCSA members visited <strong>Kisumu Rehabilitation School</strong> – Seme Kombewa, to support youth affected by drug abuse.
-    </p>
+      <!-- 🔄 Dynamically moved past events appear here -->
+      <div id="pastEventsDynamic"></div>
 
-    <div class="gallery">
-      <a href="../assets/images/drugs1.jpg" data-lightbox="drugs"><img src="../assets/images/drugs1.jpg" alt=""></a>
-      <a href="../assets/images/drugs2.jpg" data-lightbox="drugs"><img src="../assets/images/drugs2.jpg" alt=""></a>
-      <a href="../assets/images/drugs3.jpg" data-lightbox="drugs"><img src="../assets/images/drugs3.jpg" alt=""></a>
-      <a href="../assets/images/drugs4.jpg" data-lightbox="drugs"><img src="../assets/images/drugs4.jpg" alt=""></a>
-      <a href="../assets/images/drugs5.jpg" data-lightbox="drugs"><img src="../assets/images/drugs5.jpg" alt=""></a>
-      <a href="../assets/images/drugs6.jpg" data-lightbox="drugs"><img src="../assets/images/drugs6.jpg" alt=""></a>
-      <a href="../assets/images/drugs7.jpg" data-lightbox="drugs"><img src="../assets/images/drugs7.jpg" alt=""></a>
-      <a href="../assets/images/drugs8.jpg" data-lightbox="drugs"><img src="../assets/images/drugs8.jpg" alt=""></a>
-      <a href="../assets/images/drugs9.jpg" data-lightbox="drugs"><img src="../assets/images/drugs9.jpg" alt=""></a>
-      <a href="../assets/images/drugs10.jpg" data-lightbox="drugs"><img src="../assets/images/drugs10.jpg" alt=""></a>
-      <a href="../assets/images/drugs11.jpg" data-lightbox="drugs"><img src="../assets/images/drugs11.jpg" alt=""></a>
-      <a href="../assets/images/drugs12.jpg" data-lightbox="drugs"><img src="../assets/images/drugs12.jpg" alt=""></a>
-      <a href="../assets/images/drugs13.jpg" data-lightbox="drugs"><img src="../assets/images/drugs13.jpg" alt=""></a>
-      <a href="../assets/images/drugs14.jpg" data-lightbox="drugs"><img src="../assets/images/drugs14.jpg" alt=""></a>
-      <a href="../assets/images/drugs15.jpg" data-lightbox="drugs"><img src="../assets/images/drugs15.jpg" alt=""></a>
-      <a href="../assets/images/drugs16.jpg" data-lightbox="drugs"><img src="../assets/images/drugs16.jpg" alt=""></a>
-      <a href="../assets/images/drugs17.jpg" data-lightbox="drugs"><img src="../assets/images/drugs17.jpg" alt=""></a>
-      <a href="../assets/images/drugs18.jpg" data-lightbox="drugs"><img src="../assets/images/drugs18.jpg" alt=""></a>
-    </div>
+      <!-- ✅ Your existing static past events remain here -->
+      <!-- Past Event: Drug Abuse Awareness -->
+      <article class="event-card">
+        <h3>International Day Against Drug Abuse & Illicit Trafficking</h3>
+        <p class="event-meta"><strong>Date:</strong> 26th June 2025 · <strong>Location:</strong> Kisumu Rehabilitation School – Seme Kombewa</p>
+        <p>SUCSA members visited Kisumu Rehabilitation School to support youth affected by drug abuse.</p>
+        <div class="gallery">
+          <a href="../assets/images/drugs1.jpg" data-lightbox="drugs"><img src="../assets/images/drugs1.jpg" alt=""></a>
+          <a href="../assets/images/drugs2.jpg" data-lightbox="drugs"><img src="../assets/images/drugs2.jpg" alt=""></a>
+          <a href="../assets/images/drugs3.jpg" data-lightbox="drugs"><img src="../assets/images/drugs3.jpg" alt=""></a>
+          <a href="../assets/images/drugs4.jpg" data-lightbox="drugs"><img src="../assets/images/drugs4.jpg" alt=""></a>
+          <a href="../assets/images/drugs5.jpg" data-lightbox="drugs"><img src="../assets/images/drugs5.jpg" alt=""></a>
+          <a href="../assets/images/drugs6.jpg" data-lightbox="drugs"><img src="../assets/images/drugs6.jpg" alt=""></a>
+          <a href="../assets/images/drugs7.jpg" data-lightbox="drugs"><img src="../assets/images/drugs7.jpg" alt=""></a>
+          <a href="../assets/images/drugs8.jpg" data-lightbox="drugs"><img src="../assets/images/drugs8.jpg" alt=""></a>
+          <a href="../assets/images/drugs9.jpg" data-lightbox="drugs"><img src="../assets/images/drugs9.jpg" alt=""></a>
+          <a href="../assets/images/drugs10.jpg" data-lightbox="drugs"><img src="../assets/images/drugs10.jpg" alt=""></a>
+          <a href="../assets/images/drugs11.jpg" data-lightbox="drugs"><img src="../assets/images/drugs11.jpg" alt=""></a>
+          <a href="../assets/images/drugs12.jpg" data-lightbox="drugs"><img src="../assets/images/drugs12.jpg" alt=""></a>
+          <a href="../assets/images/drugs13.jpg" data-lightbox="drugs"><img src="../assets/images/drugs13.jpg" alt=""></a>
+          <a href="../assets/images/drugs14.jpg" data-lightbox="drugs"><img src="../assets/images/drugs14.jpg" alt=""></a>
+          <a href="../assets/images/drugs15.jpg" data-lightbox="drugs"><img src="../assets/images/drugs15.jpg" alt=""></a>
+          <a href="../assets/images/drugs16.jpg" data-lightbox="drugs"><img src="../assets/images/drugs16.jpg" alt=""></a>
+          <a href="../assets/images/drugs17.jpg" data-lightbox="drugs"><img src="../assets/images/drugs17.jpg" alt=""></a>
+          <a href="../assets/images/drugs18.jpg" data-lightbox="drugs"><img src="../assets/images/drugs18.jpg" alt=""></a>
+        </div>
+      </article>
 
-    <!-- Past Event: World Environment Day -->
-    <h2>Past Event: World Environment Day 2025 – Tree Planting</h2>
-    <p>
-      On <strong>5th June 2025</strong>, SUCSA joined the world in marking <em>World Environment Day</em> under the theme <strong>“Ending Plastic Pollution.”</strong> Together with students from <strong>Seme TVC</strong> partnered with Scouts and staff to plant trees and champion environmental sustainability.
-    </p>
-
-    <div class="gallery">
-      <a href="../assets/images/treep1.png" data-lightbox="trees"><img src="../assets/images/treep1.png" alt=""></a>
-      <a href="../assets/images/treep2.png" data-lightbox="trees"><img src="../assets/images/treep2.png" alt=""></a>
-      <a href="../assets/images/treep3.png" data-lightbox="trees"><img src="../assets/images/treep3.png" alt=""></a>
-      <a href="../assets/images/treep4.png" data-lightbox="trees"><img src="../assets/images/treep4.png" alt=""></a>
-      <a href="../assets/images/treep5.png" data-lightbox="trees"><img src="../assets/images/treep5.png" alt=""></a>
-      <a href="../assets/images/treep6.png" data-lightbox="trees"><img src="../assets/images/treep6.png" alt=""></a>
-    </div>
+      <!-- Past Event: World Environment Day -->
+      <article class="event-card">
+        <h3>World Environment Day 2025 – Tree Planting</h3>
+        <p class="event-meta"><strong>Date:</strong> 5th June 2025 · <strong>Theme:</strong> “Ending Plastic Pollution” · <strong>Partners:</strong> Seme TVC, Scouts, Staff</p>
+        <p>SUCSA joined the world in marking World Environment Day, planting trees and championing environmental sustainability.</p>
+        <div class="gallery">
+          <a href="../assets/images/treep1.png" data-lightbox="trees"><img src="../assets/images/treep1.png" alt=""></a>
+          <a href="../assets/images/treep2.png" data-lightbox="trees"><img src="../assets/images/treep2.png" alt=""></a>
+          <a href="../assets/images/treep3.png" data-lightbox="trees"><img src="../assets/images/treep3.png" alt=""></a>
+          <a href="../assets/images/treep4.png" data-lightbox="trees"><img src="../assets/images/treep4.png" alt=""></a>
+          <a href="../assets/images/treep5.png" data-lightbox="trees"><img src="../assets/images/treep5.png" alt=""></a>
+          <a href="../assets/images/treep6.png" data-lightbox="trees"><img src="../assets/images/treep6.png" alt=""></a>
+        </div>
+      </article>
+    </section>
   </main>
 
   <footer>
@@ -110,36 +116,178 @@
   <!-- ✅ Lightbox2 JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
-  <!-- ✅ Countdown Script -->
+  <!-- ✅ Dynamic Events Script -->
   <script>
-    function startCountdown(targetDate, elementId) {
-      const target = new Date(targetDate).getTime();
+    // ---- CONFIG: add/modify events here (ISO 8601 with Nairobi timezone +03:00) ----
+    const EVENTS = [
+      {
+        id: "career-fair-2025",
+        title: "SUCSA Career Fair",
+        venue: "Pap Kadundo Stadium, Seme",
+        startISO: "2025-08-09T09:00:00+03:00",
+        endISO:   "2025-08-09T16:00:00+03:00",
+        detailsHTML: `
+          Hisani Foundation, in partnership with <strong>SUCSA</strong> and <strong>Prestigious Consultancy</strong>, hosts a transformative Career Fair with:
+          <ul>
+            <li>Leaders in education, business, and governance</li>
+            <li>Exhibitions from universities, TVETs, and employers</li>
+            <li>Career mentorship & personal development workshops</li>
+            <li>Innovation displays and student talent showcases</li>
+          </ul>
+          <p><strong>🕘 Time:</strong> 9:00 AM – 4:00 PM</p>
+        `,
+        gallery: [
+          { src: "../assets/images/car.jpg", group: "career-2025", title: "Career Fair Poster", alt: "Career Fair Poster" }
+        ]
+      }
+    ];
 
-      function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = target - now;
+    // ---- Helpers ----
+    const TZ = "Africa/Nairobi"; // always compare calendar days in Nairobi time
 
-        if (distance < 0) {
-          document.getElementById(elementId).innerHTML = "✅ Event has started!";
-          clearInterval(timerInterval);
+    function formatNairobiDate(dateLike) {
+      return new Intl.DateTimeFormat("en-GB", {
+        timeZone: TZ, day: "2-digit", month: "long", year: "numeric"
+      }).format(new Date(dateLike));
+    }
+
+    function isSameCalendarDayInTZ(dateA, dateB, timeZone = TZ) {
+      const fmt = new Intl.DateTimeFormat("en-CA", { timeZone, year:"numeric", month:"2-digit", day:"2-digit" });
+      return fmt.format(new Date(dateA)) === fmt.format(new Date(dateB));
+    }
+
+    function msUntil(a) { return new Date(a).getTime() - Date.now(); }
+
+    function humanCountdown(ms) {
+      if (ms <= 0) return "0d 0h 0m 0s";
+      const sec = Math.floor(ms / 1000);
+      const days = Math.floor(sec / 86400);
+      const hours = Math.floor((sec % 86400) / 3600);
+      const mins = Math.floor((sec % 3600) / 60);
+      const secs = sec % 60;
+      return `${days}d ${hours}h ${mins}m ${secs}s`;
+    }
+
+    function el(tag, attrs = {}, html = "") {
+      const node = document.createElement(tag);
+      Object.entries(attrs).forEach(([k, v]) => {
+        if (k === "class") node.className = v;
+        else if (k === "dataset") Object.entries(v).forEach(([dk, dv]) => node.dataset[dk] = dv);
+        else if (k.startsWith("on") && typeof v === "function") node.addEventListener(k.slice(2), v);
+        else node.setAttribute(k, v);
+      });
+      if (html) node.innerHTML = html;
+      return node;
+    }
+
+    // ---- Renderers ----
+    function renderEventCard(evt, { section = "upcoming" } = {}) {
+      const card = el("article", { class: "event-card", id: `event-${evt.id}` });
+
+      const h3 = el("h3", {}, (section === "upcoming" ? "Upcoming: " : "") + evt.title);
+      const meta = el("p", { class: "event-meta" },
+        `<strong>📍 Venue:</strong> ${evt.venue} &nbsp;·&nbsp; <strong>📅 Date:</strong> ${formatNairobiDate(evt.startISO)}`
+      );
+
+      const countdown = el("p", { class: "countdown", id: `cd-${evt.id}` }, "⏳ Loading...");
+
+      const details = el("div", {}, evt.detailsHTML || "");
+
+      const gallery = el("div", { class: "gallery" });
+      (evt.gallery || []).forEach(img => {
+        const a = el("a", { href: img.src, "data-lightbox": img.group, "data-title": img.title || "" });
+        const im = el("img", { src: img.src, alt: img.alt || "" });
+        a.appendChild(im);
+        gallery.appendChild(a);
+      });
+
+      card.appendChild(h3);
+      if (section === "upcoming") card.appendChild(countdown);
+      card.appendChild(meta);
+      card.appendChild(details);
+      if ((evt.gallery || []).length) card.appendChild(gallery);
+
+      return { card, countdownEl: countdown };
+    }
+
+    // ---- State-driven rendering ----
+    const upcomingWrap = document.getElementById("upcomingEventsList");
+    const pastWrap = document.getElementById("pastEventsDynamic");
+    const noUpcoming = document.getElementById("noUpcoming");
+    const intervals = new Map();
+
+    function clearIntervals() {
+      intervals.forEach(id => clearInterval(id));
+      intervals.clear();
+    }
+
+    function mountUpcoming(evt) {
+      const { card, countdownEl } = renderEventCard(evt, { section: "upcoming" });
+      upcomingWrap.appendChild(card);
+
+      const startMs = new Date(evt.startISO).getTime();
+      const endMs = new Date(evt.endISO).getTime();
+
+      function tick() {
+        const now = Date.now();
+        const eventDayInNairobi = isSameCalendarDayInTZ(evt.startISO, now, TZ);
+
+        if (now > endMs) {
+          // Move to past instantly
+          card.remove();
+          if (intervals.has(evt.id)) { clearInterval(intervals.get(evt.id)); intervals.delete(evt.id); }
+          mountPast(evt);
+          toggleEmptyStates();
           return;
         }
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // Per requirement: on the event day, show "Event has started!"
+        if (eventDayInNairobi || now >= startMs) {
+          countdownEl.textContent = "✅ Event has started!";
+          return;
+        }
 
-        document.getElementById(elementId).innerHTML =
-          `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s to go`;
+        countdownEl.textContent = "⏳ " + humanCountdown(startMs - now) + " to go";
       }
 
-      updateCountdown();
-      const timerInterval = setInterval(updateCountdown, 1000);
+      // First paint
+      tick();
+      // Live updates
+      const intId = setInterval(tick, 1000);
+      intervals.set(evt.id, intId);
     }
 
-    // Start countdown for Career Fair
-    startCountdown("August 9, 2025 09:00:00", "careerCountdown");
+    function mountPast(evt) {
+      const { card } = renderEventCard(evt, { section: "past" });
+      // Insert at top of dynamic past events
+      pastWrap.prepend(card);
+    }
+
+    function toggleEmptyStates() {
+      noUpcoming.style.display = upcomingWrap.children.length ? "none" : "block";
+    }
+
+    function renderAll() {
+      // Reset UI
+      upcomingWrap.innerHTML = "";
+      pastWrap.innerHTML = "";
+      clearIntervals();
+
+      const now = Date.now();
+      EVENTS.forEach(evt => {
+        const endMs = new Date(evt.endISO).getTime();
+        if (now > endMs) {
+          mountPast(evt);
+        } else {
+          mountUpcoming(evt);
+        }
+      });
+
+      toggleEmptyStates();
+    }
+
+    // Boot
+    renderAll();
   </script>
 </body>
 </html>
