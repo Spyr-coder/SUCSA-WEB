@@ -9,6 +9,15 @@
 
   <!-- ✅ Lightbox2 CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+
+  <style>
+    .countdown {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #b22222;
+      margin-bottom: 1em;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -30,8 +39,9 @@
 
     <!-- Upcoming Career Fair -->
     <h3>Upcoming: SUCSA Career Fair</h3>
+    <p id="careerCountdown" class="countdown">⏳ Loading countdown...</p>
     <p>
-      ⏳ <strong>13 Days to Go:</strong> Don’t Miss the Career Fair at Pap Kadundo Stadium, Seme!<br><br>
+      Don’t Miss the Career Fair at Pap Kadundo Stadium, Seme!<br><br>
       Mark your calendar for <strong>9th August 2025</strong>, as <strong>Hisani Foundation</strong>, in partnership with <strong>SUCSA</strong> and <strong>Prestigious Consultancy</strong>, hosts a transformative Career Fair at <strong>Pap Kadundo Stadium</strong>.
     </p>
     <ul>
@@ -57,10 +67,6 @@
     </p>
 
     <div class="gallery">
-      <!-- Drug Abuse Event Gallery -->
-      <!-- Repeatable and clean block -->
-      <!-- Only alt="" for brevity, add descriptions if needed -->
-      <!-- You can automate the rest similarly -->
       <a href="../assets/images/drugs1.jpg" data-lightbox="drugs"><img src="../assets/images/drugs1.jpg" alt=""></a>
       <a href="../assets/images/drugs2.jpg" data-lightbox="drugs"><img src="../assets/images/drugs2.jpg" alt=""></a>
       <a href="../assets/images/drugs3.jpg" data-lightbox="drugs"><img src="../assets/images/drugs3.jpg" alt=""></a>
@@ -103,5 +109,37 @@
 
   <!-- ✅ Lightbox2 JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+  <!-- ✅ Countdown Script -->
+  <script>
+    function startCountdown(targetDate, elementId) {
+      const target = new Date(targetDate).getTime();
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = target - now;
+
+        if (distance < 0) {
+          document.getElementById(elementId).innerHTML = "✅ Event has started!";
+          clearInterval(timerInterval);
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById(elementId).innerHTML =
+          `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s to go`;
+      }
+
+      updateCountdown();
+      const timerInterval = setInterval(updateCountdown, 1000);
+    }
+
+    // Start countdown for Career Fair
+    startCountdown("August 9, 2025 09:00:00", "careerCountdown");
+  </script>
 </body>
 </html>
