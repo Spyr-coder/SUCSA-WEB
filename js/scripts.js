@@ -199,8 +199,8 @@ async function loadEvents() {
       events: [
         {
           name: "Health Camp",
-          start: "2025-11-15T09:00:00",
-          end: "2025-11-15T17:00:00",
+          start: "2025-12-19T09:00:00",
+          end: "2025-12-20T17:00:00",
           location: "Seme Sub-County Hospital",
           description: "A health outreach program with Red Cross, Aga Khan, and other partners."
         },
