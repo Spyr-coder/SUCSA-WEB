@@ -282,3 +282,150 @@ main ul {
   flex: 1;
 }
 
+/* Base layout */
+* { box-sizing: border-box; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  color: #111827;
+  background: #f8fafc;
+}
+.container {
+  width: min(1100px, 92%);
+  margin: 1.5rem auto 3rem auto;
+}
+.site-header, .site-footer {
+  background: #0b3b66;
+  color: #fff;
+  padding: 1rem 0;
+}
+.site-header h1, .site-footer p {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+.nav {
+  width: min(1100px, 92%);
+  margin: .5rem auto 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.nav a {
+  color: #e5f0ff;
+  text-decoration: none;
+  padding: .4rem .7rem;
+  border-radius: .5rem;
+}
+.nav a.active, .nav a:hover {
+  background: #0e4a82;
+  color: #fff;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  margin: 1rem 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+}
+
+/* Events layout */
+.events h2 {
+  margin-top: 0;
+}
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.event-card {
+  border: 1px solid #e5e7eb;
+  border-radius: .9rem;
+  padding: 1rem;
+  background: #ffffff;
+}
+.event-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+}
+.event-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.event-badge {
+  font-size: .75rem;
+  padding: .25rem .5rem;
+  border-radius: .5rem;
+  background: #e5e7eb;
+  color: #111827;
+}
+.status-upcoming .event-badge { background: #e0f2fe; color: #075985; }
+.status-live .event-badge { background: #dcfce7; color: #166534; }
+.status-past .event-badge { background: #f3f4f6; color: #374151; }
+
+.event-when, .event-where, .event-desc, .event-status {
+  margin: .45rem 0 0 0;
+  font-size: .95rem;
+}
+.event-where {
+  font-weight: 600;
+}
+.event-status {
+  font-weight: 600;
+}
+.empty-msg {
+  padding: .8rem;
+  color: #6b7280;
+  background: #f3f4f6;
+  border: 1px dashed #d1d5db;
+  border-radius: .7rem;
+}
+.donation-section {
+  background: #f9fafc;
+  padding: 50px 20px;
+  text-align: center;
+  border-top: 3px solid #007bff;
+}
+
+.donation-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.donation-section p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+  color: #555;
+}
+
+.donation-box {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.donate-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.donate-btn:hover {
+  background: #0056b3;
+}

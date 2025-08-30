@@ -1,43 +1,87 @@
-<!-- pages/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home - Seme Students Association</title>
+  <title>Home - Seme Students Association (SUCSA)</title>
   <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="Empowering tertiary students from Seme Constituency through unity, growth, and community-driven initiatives." />
+  <style>
+    /* Keep event cards styled neatly */
+    .event-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: .75rem 1rem;
+      margin-bottom: .75rem;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .event-card h3 { margin: 0 0 .25rem; font-size: 1.1rem; }
+    .event-meta { font-size: .9rem; color: #374151; margin: 0; }
+    .muted { color: #6b7280; font-size: .9rem; }
+    .countdown { font-size: .9rem; font-weight: bold; color: #2563eb; margin: .25rem 0; }
+    .event-desc { margin-top: .25rem; font-size: .9rem; }
+
+    /* Patron Section */
+    .patron.card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+    }
+    .patron img {
+      max-width: 350px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .patron-text {
+      flex: 1;
+    }
+
+    /* Logo Styling */
+    .association-logo {
+      display: block;
+      max-width: 350px;
+      margin: 1rem auto;
+    }
+  </style>
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <h1>Seme Universities and Colleges Students Association</h1>
     <nav>
-      <ul>
+      <ul class="nav">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="members.html">Members</a></li>
+        <li><a href="ourfamily.html">Our Family</a></li>
         <li><a href="events.html">Events</a></li>
+        <li><a href="projects.html" class="active">Our Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="intro">
+  <main class="container">
+
+    <!-- ✅ Association Logo -->
+    <img src="assets/images/LOGO.png" alt="SUCSA Association Logo" class="association-logo">
+
+    <section class="intro card">
       <h2>Hello, Welcome.</h2>
       <p>Empowering tertiary students from Seme Constituency through unity, growth, and community-driven initiatives.</p>
     </section>
 
-    <section class="motto">
+    <section class="motto card">
       <h2>Our Motto</h2>
       <blockquote>"Bridging dreams, Building Futures"</blockquote>
     </section>
 
-    <section class="vision">
+    <section class="vision card">
       <h2>Our Vision</h2>
       <p>To create a united, academically empowered generation of young people from Seme who are inspired to lead, uplift and transform their communities for a better tomorrow.</p>
     </section>
 
-    <section class="objectives">
+    <section class="objectives card">
       <h2>Our Objectives</h2>
       <ol>
         <li>To promote Academic excellence</li>
@@ -48,25 +92,170 @@
       </ol>
     </section>
 
+     <!-- ✅ Patron Section -->
+    <section class="patron card">
+      <img src="assets/images/patron.jpg" alt="Eng. George Olulo Arwa - Patron of SUCSA">
+      <div class="patron-text">
+        <h2>Our Patron</h2>
+        <p><strong>Eng. George Olulo Arwa</strong> is the cornerstone of SUCSA. He is not only a generous supporter in terms of financial contributions but also a father figure to the entire association. His guidance, generosity, and unwavering commitment have played a crucial role in bringing us this far. To us, he is more than a patron — he is our dad in the association.</p>
+      </div>
+    </section>
+
     <!-- ================== EVENTS SECTION ================== -->
-    <section class="events">
+    <section class="events card">
       <h2>Upcoming Events</h2>
       <div id="upcoming-events"></div>
+      <p id="no-upcoming" class="muted" style="display:none;">No upcoming events at the moment.</p>
     </section>
 
-    <section class="events">
+    <section class="events card">
       <h2>Past Events</h2>
       <div id="past-events"></div>
+      <p id="no-past" class="muted" style="display:none;">No past events yet.</p>
     </section>
     <!-- ==================================================== -->
-
   </main>
 
-  <footer>
+  <section id="donate" class="donation-section">
+  <h2>💝 Support SUCSA</h2>
+  <p>Your contribution helps us run community projects, student programs, and outreach initiatives.</p>
+
+  <div class="donation-box">
+    <h3>Bank & Mobile Details</h3>
+    <p><strong>Bank:</strong> Seme Community Bank</p>
+    <p><strong>Account No:</strong> 1234567890</p>
+    <p><strong>M-Pesa Paybill:</strong> 987654</p>
+    <p><strong>Account Name:</strong> SUCSA</p>
+  </div>
+
+  <div class="donation-action">
+    <!-- Example: PayPal Donation Button -->
+    <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_ID" target="_blank" class="donate-btn">Donate Online</a>
+  </div>
+</section>
+
+
+  <footer class="site-footer">
     <p>&copy; 2025 Seme Universities and Colleges Students Association</p>
   </footer>
 
-  <!-- Link to JavaScript -->
-  <script src="js/script.js"></script>
+  <!-- ✅ Inline Events Loader -->
+  <script>
+    // EVENTS Data
+    const EVENTS = [
+      {
+        id: "career-fair-2025",
+        title: "SUCSA Career Fair in Partnership with Hisani Foundation and Brains at Work CBO",
+        venue: "Pap Kadundo Stadium, Seme",
+        startISO: "2025-08-09T09:00:00+03:00",
+        endISO:   "2025-08-09T16:00:00+03:00",
+        desc: "A career fair connecting students with opportunities and mentorship."
+      },
+      {
+        id: "international-day-against-drug-abuse",
+        title: "Drug Abuse Awareness",
+        venue: "Kisumu Rehabilitation School",
+        startISO: "2025-06-26T09:00:00+03:00",
+        endISO:   "2025-06-26T17:00:00+03:00",
+        desc: "Awareness campaign on dangers of drug abuse."
+      },
+      {
+        id: "world-environment-day-2025",
+        title: "Tree Planting and Environmental Awareness",
+        venue: "Seme TVC",
+        startISO: "2025-06-05T10:00:00+03:00",
+        endISO:   "2025-06-05T18:00:00+03:00",
+        desc: "Commemorating World Environment Day through tree planting."
+      },
+      {
+        id: "health-camp-2025",
+        title: "Health Camp",
+        venue: "Pap Kadundo Stadium, Seme",
+        startISO: "2025-12-15T09:00:00+03:00",
+        endISO:   "2025-12-15T17:00:00+03:00",
+        desc: "A health outreach program with Red Cross, Aga Khan, and other partners."
+      },
+      {
+        id: "agricultural-expo-2026",
+        title: "Agricultural Expo",
+        venue: "Pap Kadundo Stadium, Seme",
+        startISO: "2026-01-12T09:00:00+03:00",
+        endISO:   "2026-01-12T17:00:00+03:00",
+        desc: "An expo showcasing modern agricultural practices and innovations."
+      }
+    ];
+
+    const TZ = "Africa/Nairobi";
+
+    function formatNairobiDate(dateLike) {
+      return new Intl.DateTimeFormat("en-GB", {
+        timeZone: TZ, day: "2-digit", month: "long", year: "numeric"
+      }).format(new Date(dateLike));
+    }
+
+    function timeLeft(targetDate) {
+      const diff = new Date(targetDate).getTime() - Date.now();
+      if (diff <= 0) return "Ongoing / Finished";
+      const d = Math.floor(diff / (1000*60*60*24));
+      const h = Math.floor((diff / (1000*60*60)) % 24);
+      const m = Math.floor((diff / (1000*60)) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+      return `${d}d ${h}h ${m}m ${s}s to go`;
+    }
+
+    function renderMiniEvent(evt, isUpcoming) {
+      const wrap = document.createElement("div");
+      wrap.className = "event-card";
+      wrap.innerHTML = `
+        <h3>${isUpcoming ? "Upcoming: " : ""}${evt.title}</h3>
+        ${isUpcoming ? `<p class="countdown" id="cd-${evt.id}">Loading countdown...</p>` : ""}
+        <p class="event-meta">
+          📍 ${evt.venue}  ·  📅 ${formatNairobiDate(evt.startISO)}
+        </p>
+        ${evt.desc ? `<p class="event-desc">${evt.desc}</p>` : ""}
+      `;
+      return wrap;
+    }
+
+    function renderHomeEvents() {
+      const upcomingDiv = document.getElementById("upcoming-events");
+      const pastDiv = document.getElementById("past-events");
+      const noUpcoming = document.getElementById("no-upcoming");
+      const noPast = document.getElementById("no-past");
+
+      upcomingDiv.innerHTML = "";
+      pastDiv.innerHTML = "";
+
+      const now = Date.now();
+      let hasUpcoming = false;
+      let hasPast = false;
+
+      EVENTS.forEach(evt => {
+        const endMs = new Date(evt.endISO).getTime();
+        if (now > endMs) {
+          pastDiv.appendChild(renderMiniEvent(evt, false));
+          hasPast = true;
+        } else {
+          upcomingDiv.appendChild(renderMiniEvent(evt, true));
+          hasUpcoming = true;
+        }
+      });
+
+      noUpcoming.style.display = hasUpcoming ? "none" : "block";
+      noPast.style.display = hasPast ? "none" : "block";
+
+      // Start countdowns for upcoming
+      EVENTS.forEach(evt => {
+        const el = document.getElementById("cd-" + evt.id);
+        if (el) {
+          setInterval(() => {
+            el.textContent = "⏳ " + timeLeft(evt.startISO);
+          }, 1000);
+        }
+      });
+    }
+
+    renderHomeEvents();
+  </script>
 </body>
 </html>

@@ -1,0 +1,33 @@
+{
+  "events": [
+    {
+      "name": "Health Camp",
+      "start": "2025-11-15T09:00:00",
+      "end": "2025-11-15T17:00:00",
+      "location": "Seme Sub-County Hospital",
+      "description": "Health outreach with Red Cross, Aga Khan, and partners. Free screenings & wellness talks."
+    },
+    {
+      "name": "Agricultural Expo",
+      "start": "2025-12-02T10:00:00",
+      "end": "2025-12-02T16:00:00",
+      "location": "Seme Resource Centre Grounds",
+      "description": "Showcasing modern agricultural practices, innovations, and agribusiness opportunities."
+    },
+
+    {
+      "name": "Community Clean-Up Day",
+      "start": "2025-07-20T08:00:00",
+      "end": "2025-07-20T12:00:00",
+      "location": "Holo Market",
+      "description": "Joint clean-up and waste management sensitization."
+    },
+    {
+      "name": "Scholarship & Bursary Drive",
+      "start": "2025-06-01T10:00:00",
+      "end": "2025-06-01T13:00:00",
+      "location": "Ward Admin Hall",
+      "description": "Application clinic and guidance for needy students."
+    }
+  ]
+}

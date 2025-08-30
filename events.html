@@ -11,7 +11,6 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
 
   <style>
-    /* Minimal styles to make cards & timers look clean, safe to keep */
     .events-wrap { display: grid; gap: 1.25rem; }
     .event-card {
       border: 1px solid #e5e7eb;
@@ -28,7 +27,7 @@
       color: #b22222;
       margin: .25rem 0 .75rem;
     }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: .5rem; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: .5rem; margin-bottom: 1rem; }
     .gallery img { width: 100%; height: 120px; object-fit: cover; border-radius: 10px; }
     .section-title { margin-top: 2rem; }
     .muted { color: #6b7280; }
@@ -41,7 +40,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="members.html">Members</a></li>
+        <li><a href="ourfamily.html" class="active">Our Family</a></li>
         <li><a href="events.html" class="active">Events</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -49,28 +48,86 @@
   </header>
 
   <main class="events-wrap">
+    <!-- UPCOMING -->
     <section aria-labelledby="upcoming-title">
       <h2 id="upcoming-title">Upcoming Events</h2>
       <p class="muted">Stay updated with our meetings, networking events, and community projects.</p>
-
-      <!-- Dynamic upcoming events will render here -->
       <div id="upcomingEventsList"></div>
       <p id="noUpcoming" class="muted" style="display:none;">No upcoming events at the moment. Check back soon.</p>
     </section>
 
+    <!-- PAST -->
     <section aria-labelledby="past-title" class="section-title">
       <h2 id="past-title">Past Events</h2>
-
-      <!-- 🔄 Dynamically moved past events appear here -->
       <div id="pastEventsDynamic"></div>
 
-      <!-- ✅ Your existing static past events remain here -->
-      <!-- Past Event: Drug Abuse Awareness -->
+      <!-- ✅ Added Career Fair -->
+      <article class="event-card">
+        <h3>SUCSA Career Fair 2025</h3>
+        <p class="event-meta"><strong>Date:</strong> 9th August 2025 · <strong>Location:</strong> Pap Kadundo Stadium – Seme</p>
+        <p>
+          The SUCSA Career Fair hosted students from various secondary schools in Seme Sub-County. 
+          We also welcomed students from outside Seme including <strong>Nyakach Girls High School</strong>, 
+          <strong>Pangani Girls High School</strong>, and others. <br><br>
+          The fair attracted numerous exhibitors from tertiary institutions across Kenya such as 
+          <strong>Great Lakes University</strong>, <strong>Co-operative University</strong>, 
+          <strong>Kenya Methodist University</strong>, <strong>Daystar University</strong>, among others. <br><br>
+          Career advisors from several universities guided students on academic and professional opportunities. 
+          The event was graced by renowned guests, dignitaries, and community leaders, making it a memorable and impactful occasion.
+        </p>
+
+        <!-- ✅ SUCSA Team -->
+        <h4>SUCSA Team</h4>
+        <div class="gallery">
+          <a href="../assets/images/SUCSA1.jpg" data-lightbox="sucsa"><img src="../assets/images/SUCSA1.jpg" alt=""></a>
+          <a href="../assets/images/SUCSA2.jpg" data-lightbox="sucsa"><img src="../assets/images/SUCSA2.jpg" alt=""></a>
+          <a href="../assets/images/SUCSA3.jpg" data-lightbox="sucsa"><img src="../assets/images/SUCSA3.jpg" alt=""></a>
+          <a href="../assets/images/SUCSA4.jpg" data-lightbox="sucsa"><img src="../assets/images/SUCSA4.jpg" alt=""></a>
+          <a href="../assets/images/SUCSA5.jpg" data-lightbox="sucsa"><img src="../assets/images/SUCSA5.jpg" alt=""></a>
+          <a href="../assets/images/SUCSA6.jpg" data-lightbox="sucsa"><img src="../assets/images/SUCSA6.jpg" alt=""></a>
+          <a href="../assets/images/SUCSA7.jpg" data-lightbox="sucsa"><img src="../assets/images/SUCSA7.jpg" alt=""></a>
+          <a href="../assets/images/SUCSA8.jpg" data-lightbox="sucsa"><img src="../assets/images/SUCSA8.jpg" alt=""></a>
+          <a href="../assets/images/SUCSA9.jpg" data-lightbox="sucsa"><img src="../assets/images/SUCSA9.jpg" alt=""></a>
+          <a href="../assets/images/SUCSA10.jpg" data-lightbox="sucsa"><img src="../assets/images/SUCSA10.jpg" alt=""></a>
+        </div>
+
+        <!-- ✅ Brains At Work Team -->
+        <h4>Brains At Work Team</h4>
+        <div class="gallery">
+          <a href="../assets/images/Brains1.jpg" data-lightbox="brains"><img src="../assets/images/Brains1.jpg" alt=""></a>
+          <a href="../assets/images/Brains2.jpg" data-lightbox="brains"><img src="../assets/images/Brains2.jpg" alt=""></a>
+          <a href="../assets/images/Brains3.jpg" data-lightbox="brains"><img src="../assets/images/Brains3.jpg" alt=""></a>
+          <a href="../assets/images/Brains4.jpg" data-lightbox="brains"><img src="../assets/images/Brains4.jpg" alt=""></a>
+          <a href="../assets/images/Brains5.jpg" data-lightbox="brains"><img src="../assets/images/Brains5.jpg" alt=""></a>
+          <a href="../assets/images/Brains6.jpg" data-lightbox="brains"><img src="../assets/images/Brains6.jpg" alt=""></a>
+          <a href="../assets/images/Brains7.jpg" data-lightbox="brains"><img src="../assets/images/Brains7.jpg" alt=""></a>
+          <a href="../assets/images/Brains8.jpg" data-lightbox="brains"><img src="../assets/images/Brains8.jpg" alt=""></a>
+          <a href="../assets/images/Brains9.jpg" data-lightbox="brains"><img src="../assets/images/Brains9.jpg" alt=""></a>
+          <a href="../assets/images/Brains10.jpg" data-lightbox="brains"><img src="../assets/images/Brains10.jpg" alt=""></a>
+        </div>
+
+        <!-- ✅ Hisani Foundation Team -->
+        <h4>Hisani Foundation Team</h4>
+        <div class="gallery">
+          <a href="../assets/images/Hisani1.jpg" data-lightbox="hisani"><img src="../assets/images/Hisani1.jpg" alt=""></a>
+          <a href="../assets/images/Hisani2.jpg" data-lightbox="hisani"><img src="../assets/images/Hisani2.jpg" alt=""></a>
+          <a href="../assets/images/Hisani3.jpg" data-lightbox="hisani"><img src="../assets/images/Hisani3.jpg" alt=""></a>
+          <a href="../assets/images/Hisani4.jpg" data-lightbox="hisani"><img src="../assets/images/Hisani4.jpg" alt=""></a>
+          <a href="../assets/images/Hisani5.jpg" data-lightbox="hisani"><img src="../assets/images/Hisani5.jpg" alt=""></a>
+          <a href="../assets/images/Hisani6.jpg" data-lightbox="hisani"><img src="../assets/images/Hisani6.jpg" alt=""></a>
+          <a href="../assets/images/Hisani7.jpg" data-lightbox="hisani"><img src="../assets/images/Hisani7.jpg" alt=""></a>
+          <a href="../assets/images/Hisani8.jpg" data-lightbox="hisani"><img src="../assets/images/Hisani8.jpg" alt=""></a>
+          <a href="../assets/images/Hisani9.jpg" data-lightbox="hisani"><img src="../assets/images/Hisani9.jpg" alt=""></a>
+          <a href="../assets/images/Hisani10.jpg" data-lightbox="hisani"><img src="../assets/images/Hisani10.jpg" alt=""></a>
+        </div>
+      </article>
+
+      <!-- ✅ Existing Past Events -->
       <article class="event-card">
         <h3>International Day Against Drug Abuse & Illicit Trafficking</h3>
         <p class="event-meta"><strong>Date:</strong> 26th June 2025 · <strong>Location:</strong> Kisumu Rehabilitation School – Seme Kombewa</p>
         <p>SUCSA members visited Kisumu Rehabilitation School to support youth affected by drug abuse.</p>
-        <div class="gallery">
+         <div class="gallery">
           <a href="../assets/images/drugs1.jpg" data-lightbox="drugs"><img src="../assets/images/drugs1.jpg" alt=""></a>
           <a href="../assets/images/drugs2.jpg" data-lightbox="drugs"><img src="../assets/images/drugs2.jpg" alt=""></a>
           <a href="../assets/images/drugs3.jpg" data-lightbox="drugs"><img src="../assets/images/drugs3.jpg" alt=""></a>
@@ -109,6 +166,25 @@
     </section>
   </main>
 
+<section id="donate" class="donation-section">
+  <h2>💝 Support SUCSA</h2>
+  <p>Your contribution helps us run community projects, student programs, and outreach initiatives.</p>
+
+  <div class="donation-box">
+    <h3>Bank & Mobile Details</h3>
+    <p><strong>Bank:</strong> Seme Community Bank</p>
+    <p><strong>Account No:</strong> 1234567890</p>
+    <p><strong>M-Pesa Paybill:</strong> 987654</p>
+    <p><strong>Account Name:</strong> SUCSA</p>
+  </div>
+
+  <div class="donation-action">
+    <!-- Example: PayPal Donation Button -->
+    <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_ID" target="_blank" class="donate-btn">Donate Online</a>
+  </div>
+</section>
+
+
   <footer>
     <p>&copy; 2025 Seme Universities and Colleges Students Association</p>
   </footer>
@@ -118,45 +194,32 @@
 
   <!-- ✅ Dynamic Events Script -->
   <script>
-    // ---- CONFIG: add/modify events here (ISO 8601 with Nairobi timezone +03:00) ----
     const EVENTS = [
       {
-        id: "career-fair-2025",
-        title: "SUCSA Career Fair",
+        id: "health-camp-2025",
+        title: "Health Camp",
+        venue: "Seme Health Center",
+        startISO: "2025-11-15T09:00:00+03:00",
+        endISO:   "2025-11-15T17:00:00+03:00",
+        detailsHTML: `<p>A health outreach program with <strong>Red Cross</strong>, <strong>Aga Khan</strong>, and other partners.</p>`,
+        gallery: []
+      },
+      {
+        id: "agri-expo-2025",
+        title: "Agricultural Expo",
         venue: "Pap Kadundo Stadium, Seme",
-        startISO: "2025-08-09T09:00:00+03:00",
-        endISO:   "2025-08-09T16:00:00+03:00",
-        detailsHTML: `
-          Hisani Foundation, in partnership with <strong>SUCSA</strong> and <strong>Prestigious Consultancy</strong>, hosts a transformative Career Fair with:
-          <ul>
-            <li>Leaders in education, business, and governance</li>
-            <li>Exhibitions from universities, TVETs, and employers</li>
-            <li>Career mentorship & personal development workshops</li>
-            <li>Innovation displays and student talent showcases</li>
-          </ul>
-          <p><strong>🕘 Time:</strong> 9:00 AM – 4:00 PM</p>
-        `,
-        gallery: [
-          { src: "../assets/images/car.jpg", group: "career-2025", title: "Career Fair Poster", alt: "Career Fair Poster" }
-        ]
+        startISO: "2025-12-02T10:00:00+03:00",
+        endISO:   "2025-12-02T18:00:00+03:00",
+        detailsHTML: `<p>An expo showcasing modern agricultural practices and innovations.</p>`,
+        gallery: []
       }
     ];
 
-    // ---- Helpers ----
-    const TZ = "Africa/Nairobi"; // always compare calendar days in Nairobi time
+    const TZ = "Africa/Nairobi";
 
     function formatNairobiDate(dateLike) {
-      return new Intl.DateTimeFormat("en-GB", {
-        timeZone: TZ, day: "2-digit", month: "long", year: "numeric"
-      }).format(new Date(dateLike));
+      return new Intl.DateTimeFormat("en-GB", { timeZone: TZ, day: "2-digit", month: "long", year: "numeric" }).format(new Date(dateLike));
     }
-
-    function isSameCalendarDayInTZ(dateA, dateB, timeZone = TZ) {
-      const fmt = new Intl.DateTimeFormat("en-CA", { timeZone, year:"numeric", month:"2-digit", day:"2-digit" });
-      return fmt.format(new Date(dateA)) === fmt.format(new Date(dateB));
-    }
-
-    function msUntil(a) { return new Date(a).getTime() - Date.now(); }
 
     function humanCountdown(ms) {
       if (ms <= 0) return "0d 0h 0m 0s";
@@ -172,121 +235,58 @@
       const node = document.createElement(tag);
       Object.entries(attrs).forEach(([k, v]) => {
         if (k === "class") node.className = v;
-        else if (k === "dataset") Object.entries(v).forEach(([dk, dv]) => node.dataset[dk] = dv);
-        else if (k.startsWith("on") && typeof v === "function") node.addEventListener(k.slice(2), v);
         else node.setAttribute(k, v);
       });
       if (html) node.innerHTML = html;
       return node;
     }
 
-    // ---- Renderers ----
     function renderEventCard(evt, { section = "upcoming" } = {}) {
       const card = el("article", { class: "event-card", id: `event-${evt.id}` });
-
       const h3 = el("h3", {}, (section === "upcoming" ? "Upcoming: " : "") + evt.title);
-      const meta = el("p", { class: "event-meta" },
-        `<strong>📍 Venue:</strong> ${evt.venue} &nbsp;·&nbsp; <strong>📅 Date:</strong> ${formatNairobiDate(evt.startISO)}`
-      );
-
-      const countdown = el("p", { class: "countdown", id: `cd-${evt.id}` }, "⏳ Loading...");
-
+      const meta = el("p", { class: "event-meta" }, `<strong>📍 Venue:</strong> ${evt.venue} &nbsp;·&nbsp; <strong>📅 Date:</strong> ${formatNairobiDate(evt.startISO)}`);
+      const countdown = el("p", { class: "countdown", id: `cd-${evt.id}` }, section === "upcoming" ? "⏳ Loading..." : "✅ Completed");
       const details = el("div", {}, evt.detailsHTML || "");
-
-      const gallery = el("div", { class: "gallery" });
-      (evt.gallery || []).forEach(img => {
-        const a = el("a", { href: img.src, "data-lightbox": img.group, "data-title": img.title || "" });
-        const im = el("img", { src: img.src, alt: img.alt || "" });
-        a.appendChild(im);
-        gallery.appendChild(a);
-      });
-
       card.appendChild(h3);
       if (section === "upcoming") card.appendChild(countdown);
       card.appendChild(meta);
       card.appendChild(details);
-      if ((evt.gallery || []).length) card.appendChild(gallery);
-
       return { card, countdownEl: countdown };
     }
 
-    // ---- State-driven rendering ----
     const upcomingWrap = document.getElementById("upcomingEventsList");
-    const pastWrap = document.getElementById("pastEventsDynamic");
     const noUpcoming = document.getElementById("noUpcoming");
     const intervals = new Map();
-
-    function clearIntervals() {
-      intervals.forEach(id => clearInterval(id));
-      intervals.clear();
-    }
 
     function mountUpcoming(evt) {
       const { card, countdownEl } = renderEventCard(evt, { section: "upcoming" });
       upcomingWrap.appendChild(card);
-
       const startMs = new Date(evt.startISO).getTime();
-      const endMs = new Date(evt.endISO).getTime();
-
       function tick() {
         const now = Date.now();
-        const eventDayInNairobi = isSameCalendarDayInTZ(evt.startISO, now, TZ);
-
-        if (now > endMs) {
-          // Move to past instantly
-          card.remove();
-          if (intervals.has(evt.id)) { clearInterval(intervals.get(evt.id)); intervals.delete(evt.id); }
-          mountPast(evt);
-          toggleEmptyStates();
-          return;
-        }
-
-        // Per requirement: on the event day, show "Event has started!"
-        if (eventDayInNairobi || now >= startMs) {
+        if (now >= startMs) {
           countdownEl.textContent = "✅ Event has started!";
-          return;
+        } else {
+          countdownEl.textContent = "⏳ " + humanCountdown(startMs - now) + " to go";
         }
-
-        countdownEl.textContent = "⏳ " + humanCountdown(startMs - now) + " to go";
       }
-
-      // First paint
       tick();
-      // Live updates
       const intId = setInterval(tick, 1000);
       intervals.set(evt.id, intId);
     }
 
-    function mountPast(evt) {
-      const { card } = renderEventCard(evt, { section: "past" });
-      // Insert at top of dynamic past events
-      pastWrap.prepend(card);
-    }
-
-    function toggleEmptyStates() {
-      noUpcoming.style.display = upcomingWrap.children.length ? "none" : "block";
-    }
-
     function renderAll() {
-      // Reset UI
       upcomingWrap.innerHTML = "";
-      pastWrap.innerHTML = "";
-      clearIntervals();
-
+      intervals.forEach(id => clearInterval(id));
+      intervals.clear();
       const now = Date.now();
       EVENTS.forEach(evt => {
         const endMs = new Date(evt.endISO).getTime();
-        if (now > endMs) {
-          mountPast(evt);
-        } else {
-          mountUpcoming(evt);
-        }
+        if (now <= endMs) mountUpcoming(evt);
       });
-
-      toggleEmptyStates();
+      noUpcoming.style.display = upcomingWrap.children.length ? "none" : "block";
     }
 
-    // Boot
     renderAll();
   </script>
 </body>
