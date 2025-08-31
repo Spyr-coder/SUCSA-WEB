@@ -6,6 +6,98 @@
   <title>Our Projects - SUCSA</title>
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- ✅ Lightbox2 CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+
+  <style>
+    /* Wrapper to give consistent spacing */
+    .projects-wrap {
+      display: grid;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .page-header {
+      text-align: center;
+      margin: 2rem 0 3rem;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project {
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+      background: #fff;
+    }
+
+    .project h2 {
+      margin-top: 0;
+    }
+
+    .project-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .project-images img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .donation-section {
+      margin: 3rem auto;
+      padding: 1.5rem;
+      max-width: 900px;
+      background: #f9fafb;
+      border-radius: 14px;
+      text-align: center;
+      border: 1px solid #e5e7eb;
+    }
+
+    .donation-box {
+      margin: 1rem 0;
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      text-align: left;
+    }
+
+    .donate-btn {
+      display: inline-block;
+      background: #b22222;
+      color: #fff;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .donate-btn:hover {
+      background: #8b1a1a;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      padding: 1rem;
+      border-top: 1px solid #e5e7eb;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -13,7 +105,7 @@
     <h1>Our Projects</h1>
     <nav>
       <ul class="nav">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="ourfamily.html">Our Family</a></li>
         <li><a href="events.html">Events</a></li>
@@ -23,104 +115,103 @@
     </nav>
   </header>
 
-  <!-- Page Title -->
-  <section class="page-header">
-    <h1>Our Projects</h1>
-    <p>Discover the impactful projects our committees are working on to support the SUCSA community.</p>
-  </section>
+  <main class="projects-wrap">
+    <!-- Page Title -->
+    <section class="page-header">
+      <h1>Our Projects</h1>
+      <p>Discover the impactful projects our committees are working on to support the SUCSA community.</p>
+    </section>
 
-  <!-- Digital Hub Project -->
-  <section class="project">
-    <h2>Digital Hub - TechPulse Committee</h2>
-    <p>
-      The Digital Hub is an initiative by the TechPulse Committee aimed at empowering students 
-      with digital skills, access to technology, and innovative solutions for the future.
-    </p>
-    <div class="project-images">
-      <img src="project1-img1.jpg" alt="Digital Hub Image 1">
-      <img src="project1-img2.jpg" alt="Digital Hub Image 2">
-      <img src="project1-img3.jpg" alt="Digital Hub Image 3">
-      <img src="project1-img4.jpg" alt="Digital Hub Image 4">
-      <img src="project1-img5.jpg" alt="Digital Hub Image 5">
+    <!-- Digital Hub Project -->
+    <section class="project">
+      <h2>Digital Hub - TechPulse Committee</h2>
+      <p>
+        The Digital Hub is an initiative by the TechPulse Committee aimed at empowering students 
+        with digital skills, access to technology, and innovative solutions for the future.
+      </p>
+      <div class="project-images">
+        <a href="project1-img1.jpg" data-lightbox="digital-hub"><img src="project1-img1.jpg" alt="Digital Hub Image 1"></a>
+        <a href="project1-img2.jpg" data-lightbox="digital-hub"><img src="project1-img2.jpg" alt="Digital Hub Image 2"></a>
+        <a href="project1-img3.jpg" data-lightbox="digital-hub"><img src="project1-img3.jpg" alt="Digital Hub Image 3"></a>
+        <a href="project1-img4.jpg" data-lightbox="digital-hub"><img src="project1-img4.jpg" alt="Digital Hub Image 4"></a>
+        <a href="project1-img5.jpg" data-lightbox="digital-hub"><img src="project1-img5.jpg" alt="Digital Hub Image 5"></a>
+      </div>
+    </section>
+
+    <!-- Poultry Project -->
+    <section class="project">
+      <h2>Poultry Project - Agricultural Committee</h2>
+      <p>
+        The Agricultural Committee is running a poultry project to promote food security and 
+        sustainable agricultural practices among students and the community.
+      </p>
+      <div class="project-images">
+        <a href="project2-img1.jpg" data-lightbox="poultry"><img src="project2-img1.jpg" alt="Poultry Project Image 1"></a>
+        <a href="project2-img2.jpg" data-lightbox="poultry"><img src="project2-img2.jpg" alt="Poultry Project Image 2"></a>
+        <a href="project2-img3.jpg" data-lightbox="poultry"><img src="project2-img3.jpg" alt="Poultry Project Image 3"></a>
+        <a href="project2-img4.jpg" data-lightbox="poultry"><img src="project2-img4.jpg" alt="Poultry Project Image 4"></a>
+        <a href="project2-img5.jpg" data-lightbox="poultry"><img src="project2-img5.jpg" alt="Poultry Project Image 5"></a>
+      </div>
+    </section>
+
+    <!-- Health Camp -->
+    <section class="project">
+      <h2>Health Camp - Health Committee</h2>
+      <p>
+        The Health Committee organizes health camps to provide free medical check-ups, 
+        health awareness, and wellness programs to benefit both students and the community.
+      </p>
+      <div class="project-images">
+        <a href="project3-img1.jpg" data-lightbox="health"><img src="project3-img1.jpg" alt="Health Camp Image 1"></a>
+        <a href="project3-img2.jpg" data-lightbox="health"><img src="project3-img2.jpg" alt="Health Camp Image 2"></a>
+        <a href="project3-img3.jpg" data-lightbox="health"><img src="project3-img3.jpg" alt="Health Camp Image 3"></a>
+        <a href="project3-img4.jpg" data-lightbox="health"><img src="project3-img4.jpg" alt="Health Camp Image 4"></a>
+        <a href="project3-img5.jpg" data-lightbox="health"><img src="project3-img5.jpg" alt="Health Camp Image 5"></a>
+      </div>
+    </section>
+
+    <!-- Ushering Agency -->
+    <section class="project">
+      <h2>SUCSA Ushering Agency - Ushering Committee</h2>
+      <p>
+        The Ushering Committee runs the SUCSA Ushering Agency, a professional service 
+        that trains and provides ushers for events while creating employment opportunities for students.
+      </p>
+      <div class="project-images">
+        <a href="../assets/images/Agency1.jpg" data-lightbox="ushering"><img src="../assets/images/Agency1.jpg" alt="Ushering Agency Image 1"></a>
+        <a href="../assets/images/Agency2.jpg" data-lightbox="ushering"><img src="../assets/images/Agency2.jpg" alt="Ushering Agency Image 2"></a>
+        <a href="../assets/images/Agency3.jpg" data-lightbox="ushering"><img src="../assets/images/Agency3.jpg" alt="Ushering Agency Image 3"></a>
+        <a href="../assets/images/Agency4.jpg" data-lightbox="ushering"><img src="../assets/images/Agency4.jpg" alt="Ushering Agency Image 4"></a>
+        <a href="../assets/images/Agency5.jpg" data-lightbox="ushering"><img src="../assets/images/Agency5.jpg" alt="Ushering Agency Image 5"></a>
+        <a href="../assets/images/Agency6.jpg" data-lightbox="ushering"><img src="../assets/images/Agency6.jpg" alt="Ushering Agency Image 6"></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Donation Section -->
+  <section id="donate" class="donation-section">
+    <h2>💝 Support SUCSA</h2>
+    <p>Your contribution helps us run community projects, student programs, and outreach initiatives.</p>
+
+    <div class="donation-box">
+      <h3>Bank & Mobile Details</h3>
+      <p><strong>Bank:</strong> Seme Community Bank</p>
+      <p><strong>Account No:</strong> 1234567890</p>
+      <p><strong>M-Pesa Paybill:</strong> 987654</p>
+      <p><strong>Account Name:</strong> SUCSA</p>
+    </div>
+
+    <div class="donation-action">
+      <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_ID" target="_blank" class="donate-btn">Donate Online</a>
     </div>
   </section>
-
-  <!-- Poultry Project -->
-  <section class="project">
-    <h2>Poultry Project - Agricultural Committee</h2>
-    <p>
-      The Agricultural Committee is running a poultry project to promote food security and 
-      sustainable agricultural practices among students and the community.
-    </p>
-    <div class="project-images">
-      <img src="project2-img1.jpg" alt="Poultry Project Image 1">
-      <img src="project2-img2.jpg" alt="Poultry Project Image 2">
-      <img src="project2-img3.jpg" alt="Poultry Project Image 3">
-      <img src="project2-img4.jpg" alt="Poultry Project Image 4">
-      <img src="project2-img5.jpg" alt="Poultry Project Image 5">
-    </div>
-  </section>
-
-  <!-- Health Camp -->
-  <section class="project">
-    <h2>Health Camp - Health Committee</h2>
-    <p>
-      The Health Committee organizes health camps to provide free medical check-ups, 
-      health awareness, and wellness programs to benefit both students and the community.
-    </p>
-    <div class="project-images">
-      <img src="project3-img1.jpg" alt="Health Camp Image 1">
-      <img src="project3-img2.jpg" alt="Health Camp Image 2">
-      <img src="project3-img3.jpg" alt="Health Camp Image 3">
-      <img src="project3-img4.jpg" alt="Health Camp Image 4">
-      <img src="project3-img5.jpg" alt="Health Camp Image 5">
-    </div>
-  </section>
-
-  <!-- Ushering Agency -->
-  <section class="project">
-    <h2>SUCSA Ushering Agency - Ushering Committee</h2>
-    <p>
-      The Ushering Committee runs the SUCSA Ushering Agency, a professional service 
-      that trains and provides ushers for events while creating employment opportunities for students.
-    </p>
-    <div class="project-images">
-      <img src="../assets/images/Agency1.jpg" alt="Ushering Agency Image 1">
-      <img src="../assets/images/Agency2.jpg" alt="Ushering Agency Image 2">
-      <img src="../assets/images/Agency3.jpg" alt="Ushering Agency Image 3">
-      <img src="../assets/images/Agency4.jpg" alt="Ushering Agency Image 4">
-      <img src="../assets/images/Agency5.jpg" alt="Ushering Agency Image 5">
-      <img src="../assets/images/Agency6.jpg" alt="Ushering Agency Image 6">
-    </div>
-  </section>
-
-<section id="donate" class="donation-section">
-  <h2>💝 Support SUCSA</h2>
-  <p>Your contribution helps us run community projects, student programs, and outreach initiatives.</p>
-
-  <div class="donation-box">
-    <h3>Bank & Mobile Details</h3>
-    <p><strong>Bank:</strong> Seme Community Bank</p>
-    <p><strong>Account No:</strong> 1234567890</p>
-    <p><strong>M-Pesa Paybill:</strong> 987654</p>
-    <p><strong>Account Name:</strong> SUCSA</p>
-  </div>
-
-  <div class="donation-action">
-    <!-- Example: PayPal Donation Button -->
-    <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_ID" target="_blank" class="donate-btn">Donate Online</a>
-  </div>
-</section>
-
-
-  <!-- ✅ Lightbox2 JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-
-
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Seme University and College Students Association (SUCSA). All rights reserved.</p>
   </footer>
+
+  <!-- ✅ Lightbox2 JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
