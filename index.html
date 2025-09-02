@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="css/style.css" />
   <meta name="description" content="Empowering tertiary students from Seme Constituency through unity, growth, and community-driven initiatives." />
   <style>
-    /* Keep event cards styled neatly */
     .event-card {
       border: 1px solid #e5e7eb;
       border-radius: 10px;
@@ -22,20 +21,34 @@
     .countdown { font-size: .9rem; font-weight: bold; color: #2563eb; margin: .25rem 0; }
     .event-desc { margin-top: .25rem; font-size: .9rem; }
 
-    /* Patron Section */
+    /* Patron Section - FIXED */
     .patron.card {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       align-items: center;
       gap: 1rem;
     }
     .patron img {
-      max-width: 350px;
+      width: 100%;
+      max-width: 850px;
+      height: auto;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: block;
     }
     .patron-text {
-      flex: 1;
+      width: 100%;
+      max-width: 850px;
+    }
+    @media (min-width: 700px) {
+      .patron.card {
+        flex-direction: column;
+        align-items: center;
+      }
+      .patron img,
+      .patron-text {
+        max-width: 850px;
+      }
     }
 
     /* Logo Styling */
@@ -48,7 +61,7 @@
 </head>
 <body>
   <header class="site-header">
-    <h1>Seme Universities and Colleges Students Association</h1>
+    <h1>Seme University and College Students Association</h1>
     <nav>
       <ul class="nav">
         <li><a href="index.html" class="active">Home</a></li>
@@ -68,7 +81,7 @@
 
     <section class="intro card">
       <h2>Hello, Welcome.</h2>
-      <p>Empowering tertiary students from Seme Constituency through unity, growth, and community-driven initiatives.</p>
+      <p>We are dedicated to nurturing and empowering university and college students from Seme Constituency by fostering unity, promoting holistic growth, and championing impactful, community-centered initiatives.</p>
     </section>
 
     <section class="motto card">
@@ -93,11 +106,19 @@
     </section>
 
      <!-- ✅ Patron Section -->
+    <h2>Our Patron</h2>
     <section class="patron card">
       <img src="assets/images/patron.jpg" alt="Eng. George Olulo Arwa - Patron of SUCSA">
       <div class="patron-text">
-        <h2>Our Patron</h2>
-        <p><strong>Eng. George Olulo Arwa</strong> is the cornerstone of SUCSA. He is not only a generous supporter in terms of financial contributions but also a father figure to the entire association. His guidance, generosity, and unwavering commitment have played a crucial role in bringing us this far. To us, he is more than a patron — he is our dad in the association.</p>
+        <p><strong>Eng. George Olulo Arwa</strong> 
+          stands as the true cornerstone of SUCSA, a pillar whose presence has shaped our journey and inspired our vision. He is not only a generous supporter through his unwavering financial contributions, but also a guiding father figure whose wisdom and care embrace the entire association.
+        </p>
+        <p>
+          His unmatched generosity, humility, and relentless dedication have been the light that has steered us through challenges and victories alike. Eng. Arwa embodies the spirit of servant leadership, always going beyond expectations to nurture dreams, empower youth, and strengthen the bond of our community.
+        </p>
+        <p>
+          To us, he is more than just a patron he is the heartbeat of SUCSA, a mentor, a protector, and truly our dad in the association. His legacy of love and commitment will forever remain etched in our hearts, as we walk the path he has helped illuminate.
+        </p>
       </div>
     </section>
 
@@ -120,11 +141,12 @@
   <h2>💝 Support SUCSA</h2>
   <p>Your contribution helps us run community projects, student programs, and outreach initiatives.</p>
 
-  <div class="donation-box">
+   <div class="donation-box">
     <h3>Bank & Mobile Details</h3>
-    <p><strong>Bank:</strong> Seme Community Bank</p>
-    <p><strong>Account No:</strong> 1234567890</p>
-    <p><strong>M-Pesa Paybill:</strong> 987654</p>
+    <P><strong>M-pesa Number</strong> 0740964804/0725588050</P>
+    <p><strong>Bank:</strong> COMING SOON </p>
+    <p><strong>Account No:</strong> COMING SOON</p>
+    <p><strong>M-Pesa Paybill:</strong> COMING SOON</p>
     <p><strong>Account Name:</strong> SUCSA</p>
   </div>
 
@@ -258,4 +280,4 @@
     renderHomeEvents();
   </script>
 </body>
-</html>
+</html></section>
